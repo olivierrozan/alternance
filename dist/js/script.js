@@ -147,13 +147,16 @@ $(function(){
 		var html = '';
 		
 		for (var i = 0; i < sheet.length; i++) {
+			var dateFormat = sheet[i]['date_modif'];
+			var dateFormat = $.datepicker.formatDate('dd MM yy', new Date(dateFormat));
+			
 			html += "<tr class='trs'>";
 			html += "<td>" + sheet[i]['id'] + "</td>";
 			html += "<td>" + sheet[i]['nom'] + "</td>";
 			html += "<td>" + sheet[i]['adresse'] + "</td>";
 			html += "<td>" + sheet[i]['poste'] + "</td>";
 			html += "<td class='tds'>" + sheet[i]['etat'] + "</td>";
-			html += "<td>" + sheet[i]['date'] + "</td>";
+			html += "<td id='d'>" + dateFormat + "</td>";
 			html += "<td>" + sheet[i]['commentaires'] + "</td>";
 			html += "<td>";
 			html += "<a class='btn btn-sm btn-warning' data-toggle='modal' data-target=" + sheet[i]['id'] + ">";
@@ -190,3 +193,38 @@ $(function(){
 	}
 });
 
+(function( factory ) {
+	if ( typeof define === "function" && define.amd ) {
+
+		// AMD. Register as an anonymous module.
+		define([ "../widgets/datepicker" ], factory );
+	} else {
+
+		// Browser globals
+		factory( jQuery.datepicker );
+	}
+}(function( datepicker ) {
+
+datepicker.regional['fr'] = {
+	closeText: 'Fermer',
+	prevText: 'Précédent',
+	nextText: 'Suivant',
+	currentText: 'Aujourd\'hui',
+	monthNames: ['janvier', 'février', 'mars', 'avril', 'mai', 'juin',
+		'juillet', 'août', 'septembre', 'octobre', 'novembre', 'décembre'],
+	monthNamesShort: ['janv.', 'févr.', 'mars', 'avr.', 'mai', 'juin',
+		'juil.', 'août', 'sept.', 'oct.', 'nov.', 'déc.'],
+	dayNames: ['dimanche', 'lundi', 'mardi', 'mercredi', 'jeudi', 'vendredi', 'samedi'],
+	dayNamesShort: ['dim.', 'lun.', 'mar.', 'mer.', 'jeu.', 'ven.', 'sam.'],
+	dayNamesMin: ['D','L','M','M','J','V','S'],
+	weekHeader: 'Sem.',
+	dateFormat: 'dd/mm/yy',
+	firstDay: 1,
+	isRTL: false,
+	showMonthAfterYear: false,
+	yearSuffix: ''};
+datepicker.setDefaults(datepicker.regional['fr']);
+
+return datepicker.regional['fr'];
+
+}));
