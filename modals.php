@@ -34,7 +34,7 @@
 					<div class="form-group">
 						<label for="m_etat">Etat:</label>
 						<select class="form-control" id="m_etat" name="m_etat" value='<?php echo $data['etat']; ?>'>
-							<option value="Attente">En attente</option>
+							<option value="Attente">Attente</option>
 							<option value="Relancé">Relancé</option>
 							<option value="Entretien">Entretien</option>
 							<option value="Refusé">Refusé</option>

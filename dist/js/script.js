@@ -1,4 +1,4 @@
-$(function(){
+$(function(){	
 	/* COLLAPSE */
 	$("#add").on("show.bs.collapse", function(){
 		$('#a').removeClass('glyphicon-plus');
@@ -33,7 +33,6 @@ $(function(){
 	
 	$("#triid").on("click", function(e){
 		toggleid = !toggleid;
-		nomCol = 'id';
 		
 		if (!toggleid) {
 			$('#col_id').removeClass('glyphicon-chevron-up');
@@ -51,7 +50,6 @@ $(function(){
 	
 	$("#trinom").on("click", function(e){
 		togglenom = !togglenom;
-		nomCol = 'nom';
 		
 		if (!togglenom) {
 			$('#col_nom').removeClass('glyphicon-chevron-up');
@@ -69,7 +67,6 @@ $(function(){
 	
 	$("#triadresse").on("click", function(e){
 		toggleadresse = !toggleadresse;
-		nomCol = 'adresse';
 		
 		if (!toggleadresse) {
 			$('#col_adr').removeClass('glyphicon-chevron-up');
@@ -87,7 +84,6 @@ $(function(){
 	
 	$("#triposte").on("click", function(e){
 		toggleposte = !toggleposte;
-		nomCol = 'poste';
 		
 		if (!toggleposte) {
 			$('#col_poste').removeClass('glyphicon-chevron-up');
@@ -105,7 +101,6 @@ $(function(){
 	
 	$("#trietat").on("click", function(e){
 		toggleetat = !toggleetat;
-		nomCol = 'etat';
 		
 		if (!toggleetat) {
 			$('#col_etat').removeClass('glyphicon-chevron-up');
@@ -123,7 +118,7 @@ $(function(){
 	
 	$("#tridate").on("click", function(e){
 		toggledate = !toggledate;
-		nomCol = 'date';
+		nomCol = 'date_modif';
 		
 		if (!toggledate) {
 			$('#col_date').removeClass('glyphicon-chevron-up');
@@ -136,7 +131,7 @@ $(function(){
 		e.preventDefault();
         e.stopPropagation();
 		
-		$.post('tri.php', { triAjax: toggledate, nom: 'date' }, retour, 'json');
+		$.post('tri.php', { triAjax: toggledate, nom: 'date_modif' }, retour, 'json');
 	});
 	
 	function retour(sheet)
@@ -144,7 +139,7 @@ $(function(){
 		$('location').attr('href', 'index.php');
 		$('.trs').empty();
 		
-		var html = '';
+		var html = "";
 		
 		for (var i = 0; i < sheet.length; i++) {
 			var dateFormat = sheet[i]['date_modif'];
@@ -159,7 +154,7 @@ $(function(){
 			html += "<td id='d'>" + dateFormat + "</td>";
 			html += "<td>" + sheet[i]['commentaires'] + "</td>";
 			html += "<td>";
-			html += "<a class='btn btn-sm btn-warning' data-toggle='modal' data-target=" + sheet[i]['id'] + ">";
+			html += "<a id='edit' class='btn btn-sm btn-warning' data-toggle='modal' data-target=" + sheet[i]['id'] + ">";
 			html += "<span class='glyphicon glyphicon-pencil'></span>";
 			html += "Modifier";
 			html += "</a>";
@@ -170,7 +165,7 @@ $(function(){
 			html += "Supprimer";
 			html += "</a>";
 			html += "</td>";
-			html += "</tr>";	
+			html += "</tr>";		
 		}
 		
 		$(".table").append(html);
