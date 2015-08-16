@@ -1,9 +1,9 @@
 -- phpMyAdmin SQL Dump
--- version 4.4.13.1
+-- version 4.4.12
 -- http://www.phpmyadmin.net
 --
 -- Client :  127.0.0.1
--- Généré le :  Dim 16 Août 2015 à 17:15
+-- Généré le :  Lun 17 Août 2015 à 01:21
 -- Version du serveur :  5.6.17
 -- Version de PHP :  5.5.12
 
@@ -114,7 +114,7 @@ CREATE TABLE IF NOT EXISTS `todolist` (
 INSERT INTO `todolist` (`id`, `task`) VALUES
 (1, 'refaire le code en MVC'),
 (2, 'exporter en fichier'),
-(3, 'remplacer le bouton "tri par : " par "afficher seulement"');
+(3, 'afficher label de tri');
 
 --
 -- Index pour les tables exportées
