@@ -1,9 +1,9 @@
 -- phpMyAdmin SQL Dump
--- version 4.4.12
+-- version 4.4.13.1
 -- http://www.phpmyadmin.net
 --
 -- Client :  127.0.0.1
--- Généré le :  Lun 17 Août 2015 à 01:21
+-- Généré le :  Lun 17 Août 2015 à 16:13
 -- Version du serveur :  5.6.17
 -- Version de PHP :  5.5.12
 
@@ -46,55 +46,55 @@ INSERT INTO `sheet` (`id`, `nom`, `adresse`, `poste`, `etat`, `date_modif`, `com
 (3, 'DPDO', 'saint amand', 'Développeur Web', 'Attente', '2015-08-03', NULL),
 (4, 'CRISTAL ID', 'Lezennes', 'Développeur FontEnd / Intégrateur', 'Attente', '2015-08-03', NULL),
 (5, 'SARBACANE SOFTWARE', 'Lille', 'Développeur Web', 'Attente', '2015-07-30', NULL),
-(6, 'LEMON INTERACTIVE', 'Lille', 'Développeur Web', 'Refusé', '2015-08-03', NULL),
+(6, 'LEMON INTERACTIVE', 'Lille', 'Développeur Web', 'Refusé', '2015-08-06', NULL),
 (7, 'CHAPRISTI', 'Lille', 'Développeur Web', 'Entretien', '2015-08-16', 'entretien le 18 aout 11h'),
 (8, 'OPEN', 'Lille', 'Développeur Web', 'Attente', '2015-07-30', NULL),
 (10, 'IT RH CONCEPT', 'Lille', 'Développeur PHP', 'Attente', '2015-07-30', NULL),
 (11, 'UNIS', 'Villeneuve d''Ascq', 'Développeur FontEnd', 'Refusé', '2015-08-03', NULL),
 (12, 'LYNX RH', 'Lille', 'Développeur Web', 'Attente', '2015-07-29', NULL),
 (13, 'SOGETI', 'Villeneuve d''Ascq', 'Développeur Web', 'Attente', '2015-07-24', NULL),
-(14, 'ATEXWEB', 'Villeneuve d', 'Développeur Web', 'Attente', '2015-08-16', 'Erreur Mail'),
-(15, 'MADE IN SURVEYS', 'Lille', 'Développeur Web', 'Attente', '2015-07-22', NULL),
-(16, 'OS CONCEPT', 'Douai', 'Développeur Web / Symfony2', 'Refusé', '2015-08-03', NULL),
+(14, 'ATEXWEB', 'Villeneuve d''Ascq', 'Développeur Web', 'Attente', '2015-08-16', 'Erreur Mail'),
+(15, 'MADE IN SURVEYS', 'Lille', 'Développeur Web', 'Attente', '2015-08-12', NULL),
+(16, 'OS CONCEPT', 'Douai', 'Développeur Web / Symfony2', 'Refusé', '2015-07-21', NULL),
 (17, 'ENACO EXCELLENCE', 'La Madeleine', 'Développeur Web PHP / MYSQL', 'Attente', '2015-08-16', 'Erreur Mail'),
 (18, 'WEB-TRANSITION', 'Lille', 'Développeur / Intégrateur FrontEnd Web & Mobile Web', 'Attente', '2015-07-28', NULL),
 (19, 'MAZEBERRY', 'Lille', 'Développeur Web / Support Client', 'Refusé', '2015-08-03', NULL),
 (20, 'CAILLE ASSOCIES', 'Lille', 'Développeur Web / App', 'Attente', '2015-07-28', NULL),
 (21, 'ATECNA', 'Lille', 'Développeur / Intégrateur Web ', 'Attente', '2015-07-28', NULL),
-(22, 'ITELIOS', 'Lille', 'Développeur Web E-Commerce', 'Attente', '2015-07-28', NULL),
-(23, 'INEAT CONSEIL', 'Lille', 'Développeur Symfony2', 'Refusé', '2015-08-03', NULL),
+(22, 'ITELIOS', 'Lille', 'Développeur Web E-Commerce', 'Refusé', '2015-08-17', NULL),
+(23, 'INEAT CONSEIL', 'Lille', 'Développeur Symfony2', 'Refusé', '2015-07-09', NULL),
 (24, 'ASMODINE', 'Lille', 'Développeur Web', 'Relancé', '2015-08-05', NULL),
 (25, 'DSDSYSTEM', 'Lille', 'Développeur PHP', 'Relancé', '2015-08-05', NULL),
 (26, 'EVERYSENS', 'Lille', 'Développeur Web FrontEnd', 'Relancé', '2015-08-05', NULL),
 (27, 'LES LUNETTES BLEUES', 'Plaine Images Tourcoing', 'Intégrateur / Développeur Web', 'Relancé', '2015-08-05', NULL),
-(28, 'GROUPAGORA', '', 'Développeur Web', 'Relancé', '2015-07-30', NULL),
+(28, 'GROUPAGORA', '	20 Rue Joubert, 75009 Paris', 'Développeur Web', 'Refusé', '2015-08-03', NULL),
 (29, 'EDF', '', 'Développeur', 'Attente', '2015-06-30', NULL),
 (30, 'VSI INNOVATION', '2 rue Peclet, 59300 Valenciennes', 'Développeur PHP', 'Relancé', '2015-08-05', NULL),
-(31, 'MOBISKILL PARTNER', 'Lille', 'Développeur Web / Intégrateur', 'Refusé', '2015-08-03', NULL),
-(32, 'ITALENT', 'Lille', 'Développeur Web', 'Refusé', '2015-08-03', NULL),
+(31, 'MOBISKILL PARTNER', 'Lille', 'Développeur Web / Intégrateur', 'Refusé', '2015-07-20', NULL),
+(32, 'ITALENT', 'Lille', 'Développeur Web', 'Refusé', '2015-07-15', NULL),
 (33, 'GOTO GAMES', 'Lille', 'Développeur Web', 'Relancé', '2015-08-05', NULL),
-(34, 'B''DOM', 'Villeneuve d''Ascq', 'Développeur Web', 'Refusé', '2015-08-03', NULL),
-(35, 'CASTORAMA', 'Templemars', 'Web Master', 'Refusé', '2015-08-03', NULL),
+(34, 'B''DOM', 'Villeneuve d''Ascq', 'Développeur Web', 'Refusé', '2015-07-09', NULL),
+(35, 'CASTORAMA', 'Templemars', 'Web Master', 'Refusé', '2015-07-16', NULL),
 (36, 'J2S', 'Lille', 'Développeur Applicatif PHP-JS / HTML5', 'Refusé', '2015-08-03', NULL),
-(37, 'AVENIRHESEAU', '', 'Développeur Web Symfony2', 'Relancé', '2015-07-20', NULL),
+(37, 'AVENIRHESEAU', 'Rue Becquerel, 59500 Douai', 'Développeur Web Symfony2', 'Relancé', '2015-08-12', NULL),
 (38, 'DPS & CO', '134 rue royale 59000 Lille', 'Développeur Web', 'Refusé', '2015-08-03', NULL),
-(39, 'ALTIMA', '33 rue dupleix 59100 Roubaix', 'Développeur Web', 'Relancé', '2015-07-20', NULL),
-(40, 'APOGGIA WEB', '', 'Développeur Front / Back', 'Relancé', '2015-06-15', NULL),
+(39, 'ALTIMA', '33 rue dupleix 59100 Roubaix', 'Développeur Web', 'Relancé', '2015-08-12', NULL),
+(40, 'APOGGIA WEB', '', 'Développeur Front / Back', 'Relancé', '2015-08-17', NULL),
 (41, 'CAP GEMINI', '165 avenue de Bretagne 59000 Lille', 'Consultant Mobilité', 'Attente', '2015-08-03', NULL),
-(42, 'EASYTEAM', '43 rue Faidherbe 59800 Lille', 'Ingénieur Base de  données', 'Relancé', '2015-07-08', NULL),
+(42, 'EASYTEAM', '43 rue Faidherbe 59800 Lille', 'Ingénieur Base de  données', 'Refusé', '2015-08-12', NULL),
 (43, 'CONTEXEO', '165 avenue de Bretagne 59000 Lille', 'Développeur Java / Android', 'Relancé', '2015-06-15', NULL),
-(44, 'PUMPKIN', '', 'Développeur Android', 'Refusé', '2015-08-03', NULL),
+(44, 'PUMPKIN', 'euratechnologies lille', 'Développeur Android', 'Refusé', '2015-05-26', NULL),
 (45, 'CAP GEMINI', '165 avenue de Bretagne 59000 Lille', 'Consultant Java / J2EE', 'Attente', '2015-08-03', NULL),
-(46, 'ECOBUROTIC', '', 'Développeur Web', 'Relancé', '2015-07-20', NULL),
+(46, 'ECOBUROTIC', 'Rue Marc Jodot, 59220 Rouvignies', 'Développeur Web', 'Relancé', '2015-08-12', NULL),
 (47, 'CYLANDE C.S.', '15 avenue André Diligent BP 354 59100 Roubaix', 'Concepteur - Développeur Web', 'Relancé', '2015-08-05', NULL),
-(48, 'RECISIO', '', 'Développeur PHP', 'Refusé', '2015-08-03', NULL),
+(48, 'RECISIO', '74 rue des Arts, 59800 Lille', 'Développeur PHP', 'Refusé', '2015-08-03', NULL),
 (49, 'DECATHLON', '', 'Développeur Web', 'Relancé', '2015-07-20', NULL),
 (50, 'INSITACTION', 'Lille', 'Développeur Web', 'Relancé', '2015-08-03', NULL),
 (51, 'OFFICEEASY.FR', 'Marcq en Baroeul', 'Développeur', 'Attente', '2015-08-03', NULL),
 (52, 'AXXIS', '60 rue Edouard Delesalle 59000 Lille', 'Développeur Web', 'Refusé', '2015-08-03', NULL),
 (53, 'OXYGEM', '45 Boulevard du général Leclerc 59100 Roubaix', 'Développeur PHP', 'Relancé', '2015-08-05', NULL),
-(54, 'FITIZZI', '165 Avenue de Bretagne 59000 Lille', 'Développeur Web', 'Relancé', '2015-08-15', NULL),
-(55, 'AUCHAN', 'Villeneuve d''Ascq', 'Développeur Web', 'Refusé', '2015-08-16', '');
+(54, 'FITIZZI', '165 Avenue de Bretagne 59000 Lille', 'Développeur Web', 'Relancé', '2015-08-05', NULL),
+(55, 'AUCHAN', 'Villeneuve d''Ascq', 'Développeur Web', 'Refusé', '2015-08-10', '');
 
 -- --------------------------------------------------------
 
@@ -114,7 +114,7 @@ CREATE TABLE IF NOT EXISTS `todolist` (
 INSERT INTO `todolist` (`id`, `task`) VALUES
 (1, 'refaire le code en MVC'),
 (2, 'exporter en fichier'),
-(3, 'afficher label de tri');
+(3, 'remplacer le bouton "tri par : " par "afficher seulement"');
 
 --
 -- Index pour les tables exportées

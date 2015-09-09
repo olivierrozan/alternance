@@ -1,4 +1,4 @@
-<div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
+<div class=""><!-- col-sm-9 col-sm-offset-3 col-md-10 main col-md-offset-2 -->
 	<h2 class="sub-header">
 		Alternance Status
 		<a href="index.php"><button class="btn btn-sm btn-info" role="button">Voir Tout</button></a>
@@ -61,7 +61,7 @@
 	
 	<p id="confirm"></p>
 	
-	<table class="table">
+	<table class="table table-striped">
 		<tr>
 			<th><a id='triid' href="#"><span id='col_id' class="glyphicon glyphicon-chevron-down"></span>Id</a></th>
 			<th><a id='trinom' href="#"><span id='col_nom' class="glyphicon glyphicon-chevron-up"></span>Nom</a></th>
@@ -70,6 +70,7 @@
 			<th><a id='trietat' href="#"><span id='col_etat' class="glyphicon glyphicon-chevron-up"></span>Etat</a></th>
 			<th><a id='tridate' href="#"><span id='col_date' class="glyphicon glyphicon-chevron-up"></span>Date Modification</a></th>
 			<th>Commentaires</th>
+			<th></th>
 			<th></th>
 			<th></th>
 		</tr>
@@ -86,6 +87,12 @@
 				<td class="tds"><?php echo $data['etat']; ?></td>
 				<td><?php echo utf8_encode(strftime("%d %B %Y", strtotime($data['date_modif']))); ?></td>
 				<td><?php echo $data['commentaires']; ?></td>
+				<td>
+					<a class="btn btn-sm btn-primary" href="relancerAjax.php?id='<?php echo $data['id']; ?>'">
+						<span class="glyphicon glyphicon-flash"></span>
+						Relancer
+					</a>
+				</td>
 				<td>
 					<a class="btn btn-sm btn-warning" data-toggle="modal" data-target="<?php echo '#' . $data['id']; ?>">
 						<span class="glyphicon glyphicon-pencil"></span>
