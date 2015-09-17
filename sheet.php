@@ -10,7 +10,10 @@
 				<li><a href="index.php?only=2">Entretien</a></li>
 				<li><a href="index.php?only=3">Refusé</a></li>
 			</ul>
+			
 		</span>
+		
+		<span><?php echo $count . " lignes au total"; ?></span>
 	</h2>
 	
 	<p>
@@ -59,8 +62,6 @@
 		</form>
 	</div>
 	
-	<p id="confirm"></p>
-	
 	<table class="table table-striped">
 		<tr>
 			<th><a id='triid' href="#"><span id='col_id' class="glyphicon glyphicon-chevron-down"></span>Id</a></th>
@@ -72,7 +73,7 @@
 			<th>Commentaires</th>
 			<th></th>
 			<th></th>
-			<th></th>
+			<!--<th></th>-->
 		</tr>
 		
 		<?php
@@ -99,19 +100,19 @@
 						Modifier
 					</a>
 				</td>
-				<td>
+				<!--<td>
 					<a class="btn btn-sm btn-danger" href="supprimerAjax.php?id='<?php echo $data['id']; ?>'">
 						<?php
-						if (isset($_GET['tri'])) {
+						//if (isset($_GET['tri'])) {
 						?>
-						<input type='hidden' name='tri' value='<?php echo $_GET['tri']; ?>'>
+						<input type='hidden' name='tri' value='<?php //echo $_GET['tri']; ?>'>
 						<?php
-						}
+						//}
 						?>
 						<span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
 						Supprimer
 					</a>
-				</td>
+				</td>-->
 			</tr>
 		<?php
 		}

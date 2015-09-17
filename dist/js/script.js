@@ -154,17 +154,23 @@ $(function(){
 			html += "<td id='d'>" + dateFormat + "</td>";
 			html += "<td>" + sheet[i]['commentaires'] + "</td>";
 			html += "<td>";
+			html += "<a class='btn btn-sm btn-primary' href=relancerAjax.php?id=" + sheet[i]['id'] + ">";
+			html += "<span class='glyphicon glyphicon-flash'></span>";
+			html += "Relancer";
+			html += "</a>";
+			html += "</td>";
+			html += "<td>";
 			html += "<a id='edit' class='btn btn-sm btn-warning' data-toggle='modal' data-target=" + sheet[i]['id'] + ">";
 			html += "<span class='glyphicon glyphicon-pencil'></span>";
 			html += "Modifier";
 			html += "</a>";
 			html += "</td>";
-			html += "<td>";
+			/*html += "<td>";
 			html += "<a class='btn btn-sm btn-danger' href=supprimerAjax.php?id=" + sheet[i]['id'] + ">";
 			html += "<span class='glyphicon glyphicon-remove' aria-hidden='true'></span>";
 			html += "Supprimer";
 			html += "</a>";
-			html += "</td>";
+			html += "</td>";*/
 			html += "</tr>";		
 		}
 		
