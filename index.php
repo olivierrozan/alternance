@@ -1,5 +1,18 @@
 <?php 
 include ("init.php");
+
+function trier($tri, $order)
+{
+	$i = $order;
+	
+	$i++;
+	if ($i % 2 == 0) {
+		echo "index.php?tri=" . $tri . "&order=0";
+	} else {
+		echo "index.php?tri=" . $tri . "&order=1";
+		$i = 0;
+	}
+}
 ?>
 
 <!DOCTYPE html>
