@@ -64,12 +64,66 @@
 	
 	<table class="table table-striped">
 		<tr>
-			<th><a id='triid' href="#"><span id='col_id' class="glyphicon glyphicon-chevron-down"></span>Id</a></th>
-			<th><a id='trinom' href="#"><span id='col_nom' class="glyphicon glyphicon-chevron-up"></span>Nom</a></th>
-			<th><a id='triadresse' href="#"><span id='col_adr' class="glyphicon glyphicon-chevron-up"></span>Adresse</a></th>
-			<th><a id='triposte' href="#"><span id='col_poste' class="glyphicon glyphicon-chevron-up"></span>Poste</a></th>
-			<th><a id='trietat' href="#"><span id='col_etat' class="glyphicon glyphicon-chevron-up"></span>Etat</a></th>
-			<th><a id='tridate' href="#"><span id='col_date' class="glyphicon glyphicon-chevron-up"></span>Date Modification</a></th>
+			<th><a id='triid' href="
+			<?php
+			if (isset($_GET['tri']) && isset($_GET['order'])) {
+				trier("id", $_GET['order']);
+			} else {
+				echo "index.php?tri=id&order=1";
+			}
+			?>
+			"><span id='col_id' class="glyphicon glyphicon-chevron-down"></span>Id</a></th>
+			
+			<th><a id='trinom' href="
+			<?php
+			if (isset($_GET['tri']) && isset($_GET['order'])) {
+				trier("nom", $_GET['order']);
+			} else {
+				echo "index.php?tri=nom&order=1";
+			}
+			?>
+			"><span id='col_nom' class="glyphicon glyphicon-chevron-up"></span>Nom</a></th>
+			
+			<th><a id='triadresse' href="
+			<?php
+			if (isset($_GET['tri']) && isset($_GET['order'])) {
+				trier("adresse", $_GET['order']);
+			} else {
+				echo "index.php?tri=adresse&order=1";
+			}
+			?>
+			"><span id='col_adr' class="glyphicon glyphicon-chevron-up"></span>Adresse</a></th>
+			
+			<th><a id='triposte' href="
+			<?php
+			if (isset($_GET['tri']) && isset($_GET['order'])) {
+				trier("poste", $_GET['order']);
+			} else {
+				echo "index.php?tri=poste&order=1";
+			}
+			?>
+			"><span id='col_poste' class="glyphicon glyphicon-chevron-up"></span>Poste</a></th>
+			
+			<th><a id='trietat' href="
+			<?php
+			if (isset($_GET['tri']) && isset($_GET['order'])) {
+				trier("etat", $_GET['order']);
+			} else {
+				echo "index.php?tri=etat&order=1";
+			}
+			?>
+			"><span id='col_etat' class="glyphicon glyphicon-chevron-up"></span>Etat</a></th>
+			
+			<th><a id='tridate' href="
+			<?php
+			if (isset($_GET['tri']) && isset($_GET['order'])) {
+				trier("date_modif", $_GET['order']);
+			} else {
+				echo "index.php?tri=date_modif&order=1";
+			}
+			?>
+			"><span id='col_date' class="glyphicon glyphicon-chevron-up"></span>Date Modification</a></th>
+			
 			<th>Commentaires</th>
 			<th></th>
 			<th></th>
