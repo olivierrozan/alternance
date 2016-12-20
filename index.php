@@ -37,18 +37,17 @@ function trier($tri, $order)
 		<nav class="navbar navbar-inverse navbar-fixed-top">
 			<div class="container-fluid">
 				<div class="navbar-header">
-					<a class="navbar-brand" href="#" data-toggle="collapse" data-target="#tdlist">
-						TodoList
-					</a>
+					<div class="navbar-brand">
+						Alternance
+					</div>
 				</div>
 			</div>
 		</nav>
 		
-		<div class="container">
+		<div class="container-fluid">
 			<div class="row">
-				<?php require('todolist.php'); ?>
 				<?php require('sheet.php'); ?>
-			</div>		
+			</div>
 		</div>
 		
 	</body>

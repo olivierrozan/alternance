@@ -34,11 +34,15 @@
 					<div class="form-group">
 						<label for="m_etat">Etat:</label>
 						<select class="form-control" id="m_etat" name="m_etat" value='<?php echo $data['etat']; ?>'>
-							<option value="Attente">Attente</option>
-							<option value="Relancé">Relancé</option>
-							<option value="Entretien">Entretien</option>
-							<option value="Refusé">Refusé</option>
+							<option value="Attente" <?php if ($data['etat'] === "Attente") echo "selected"; ?>>Attente</option>
+							<option value="Relancé" <?php if ($data['etat'] === "Relancé") echo "selected"; ?>>Relancé</option>
+							<option value="Entretien" <?php if ($data['etat'] === "Entretien") echo "selected"; ?>>Entretien</option>
+							<option value="Refusé" <?php if ($data['etat'] === "Refusé") echo "selected"; ?>>Refusé</option>
 						</select>
+					</div>
+					<div class="form-group">
+						<label for="email">Email:</label>
+						<input type="mail" class="form-control" id="m_email" name="m_email" placeholder="email">
 					</div>
 					<div class="form-group">
 						<label for="m_com">Commentaires:</label>
