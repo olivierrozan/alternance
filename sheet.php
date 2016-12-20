@@ -1,4 +1,4 @@
-<div class=""><!-- col-sm-9 col-sm-offset-3 col-md-10 main col-md-offset-2 -->
+<div class="col-sm-12"><!-- col-sm-9 col-sm-offset-3 col-md-10 main col-md-offset-2 -->
 	<h2 class="sub-header">
 		Alternance Status
 		<a href="index.php"><button class="btn btn-sm btn-info" role="button">Voir Tout</button></a>
@@ -52,6 +52,10 @@
 					<option value="Entretien">Entretien</option>
 					<option value="Refusé">Refusé</option>
 				</select>
+			</div>
+			<div class="form-group">
+				<label for="email">Email:</label>
+				<input type="mail" class="form-control" id="email" name="email" placeholder="email">
 			</div>
 			<div class="form-group">
 				<label for="com">Commentaires:</label>
@@ -124,8 +128,9 @@
 			?>
 			"><span id='col_date' class="glyphicon glyphicon-chevron-up"></span>Date Modification</a></th>
 			
+			<th>Email</th>
 			<th>Commentaires</th>
-			<th></th>
+			<th>Prochaine Relance</th>
 			<th></th>
 			<!--<th></th>-->
 		</tr>
@@ -141,12 +146,23 @@
 				<td><?php echo $data['poste']; ?></td>
 				<td class="tds"><?php echo $data['etat']; ?></td>
 				<td><?php echo utf8_encode(strftime("%d %B %Y", strtotime($data['date_modif']))); ?></td>
+				<td><?php echo $data['email']; ?></td>
 				<td><?php echo $data['commentaires']; ?></td>
 				<td>
-					<a class="btn btn-sm btn-primary" href="relancerAjax.php?id='<?php echo $data['id']; ?>'">
-						<span class="glyphicon glyphicon-flash"></span>
-						Relancer
-					</a>
+					<?php 
+					$datetime1 = new DateTime($data['date_modif']);
+					$datetime2 = new DateTime(date('Y-m-d'));
+					$interval = $datetime1->diff($datetime2);
+					
+					if ($interval->days < 10) {
+						$delai = 10 - $interval->days;
+						echo "Dans " . $delai . " jours";
+					} else {
+						echo '<a class="btn btn-sm btn-primary" href="relancerAjax.php?id=' . $data["id"] . '"><span class="glyphicon glyphicon-flash"></span>
+						Relancer 
+						</a>';
+					}
+					?>
 				</td>
 				<td>
 					<a class="btn btn-sm btn-warning" data-toggle="modal" data-target="<?php echo '#' . $data['id']; ?>">
