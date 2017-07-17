@@ -42,7 +42,7 @@
 					</div>
 					<div class="form-group">
 						<label for="email">Email:</label>
-						<input type="mail" class="form-control" id="m_email" name="m_email" placeholder="email">
+						<input type="mail" class="form-control" id="m_email" name="m_email" value='<?php echo $data['email']; ?>' placeholder="email">
 					</div>
 					<div class="form-group">
 						<label for="m_com">Commentaires:</label>
