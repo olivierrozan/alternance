@@ -46,6 +46,3 @@ if (isset($_GET['only'])) {
 
 $donnees = $reponse->fetchAll();
 $count = $reponse->rowCount();
-
-$reponse2 = $bdd->query("SELECT * FROM todolist ORDER BY id");
-$donnees2 = $reponse2->fetchAll();

@@ -20,7 +20,7 @@ function trier($tri, $order)
 <html>
 	
 	<head>
-		<title>Alternance </title>
+		<title>Alternance</title>
 		<meta charset="utf-8">
 		
 		<link rel="stylesheet" style="text/css" href="dist/css/bootstrap.min.css">
@@ -38,7 +38,7 @@ function trier($tri, $order)
 			<div class="container-fluid">
 				<div class="navbar-header">
 					<a class="navbar-brand" href="#" data-toggle="collapse" data-target="#tdlist">
-						TodoList
+						Liste entreprises
 					</a>
 				</div>
 			</div>
@@ -46,7 +46,7 @@ function trier($tri, $order)
 		
 		<div class="container">
 			<div class="row">
-				<?php require('todolist.php'); ?>
+				<?php /*require('todolist.php'); */?>
 				<?php require('sheet.php'); ?>
 			</div>		
 		</div>
