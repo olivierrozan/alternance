@@ -40,15 +40,17 @@ function trier($tri, $order)
 					<a class="navbar-brand" href="#" data-toggle="collapse" data-target="#tdlist">
 						Liste entreprises
 					</a>
+					<div class="navbar-brand">
+						Alternance
+					</div>
 				</div>
 			</div>
 		</nav>
 		
-		<div class="container">
+		<div class="container-fluid">
 			<div class="row">
-				<?php /*require('todolist.php'); */?>
 				<?php require('sheet.php'); ?>
-			</div>		
+			</div>
 		</div>
 		
 	</body>

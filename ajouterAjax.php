@@ -1,13 +1,14 @@
 <?php
 	include("init.php");
 	
-	$req = $bdd->prepare(' INSERT INTO sheet(nom, adresse, poste, etat, date_modif, commentaires) VALUES(:nom, :adresse, :poste, :etat, :date, :commentaires) ');
+	$req = $bdd->prepare(' INSERT INTO sheet(nom, adresse, poste, etat, date_modif, email, commentaires) VALUES(:nom, :adresse, :poste, :etat, :date, :email, :commentaires) ');
 	$req->execute(array(
 		'nom' => $_POST["nom"],
 		'adresse' => $_POST["adresse"],
 		'poste' => $_POST["poste"],
 		'etat' => $_POST["etat"],
-		'date' => date("Y-m-d"), 
+		'date' => date("Y-m-d"),
+		'email' => $_POST["email"], 
 		'commentaires' => $_POST['com']
 	));
 	

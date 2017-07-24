@@ -13,11 +13,13 @@ if (isset($_GET['tri']) && isset($_GET['order'])) {
 		$order = "DESC";
 	}
 } else {
-	$tri = "id";
-	$order = "";
+	$tri = "date_modif";
+	$order = "DESC";
 }
 
-$reponse = $bdd->query("SELECT * FROM sheet ORDER BY " . $tri . " " . $order);
+$reponse = $bdd->query("SELECT * FROM sheet WHERE etat NOT IN ('Refusé') ORDER BY " . $tri . " " . $order);
+//$reponse = $bdd->query("SELECT * FROM sheet WHERE date_modif BETWEEN '2015-09-14' and '2015-09-18' ORDER BY " . $tri . " " . $order);
+
 
 if (isset($_GET['only'])) {
 
@@ -45,4 +47,5 @@ if (isset($_GET['only'])) {
 }*/
 
 $donnees = $reponse->fetchAll();
+
 $count = $reponse->rowCount();
